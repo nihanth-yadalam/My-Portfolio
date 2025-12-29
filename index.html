@@ -486,30 +486,30 @@
     </footer>
 
     <script>
-        // --- 1. Dark/Light Mode Toggle ---
+       // --- 1. Dark/Light Mode Toggle (Updated for Dark Default) ---
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
         const icon = themeToggle.querySelector('i');
 
-        // Check local storage for preference
-        if(localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
+        // Check local storage - if user previously chose 'light', apply it
+        if(localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
         }
 
         themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
             
             // Toggle icon and save preference
-            if(body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
+            if(body.classList.contains('light-mode')) {
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
                 localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
             }
         });
 
