@@ -15,21 +15,21 @@
         }
 
         /* --- CSS VARIABLES FOR THEMING --- */
-        :root {
-            /* Light Mode (Default) */
+        /* :root {
+           
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-main: #2d3436;
             --text-light: #636e72;
-            --primary-color: #0984e3; /* Corporate Blue */
+            --primary-color: #0984e3; 
             --accent-color: #74b9ff;
             --nav-bg: rgba(255, 255, 255, 0.95);
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
-        }
+        } */
 
         /* Dark Mode Overrides */
-        body.dark-mode {
+        /* body.dark-mode {
             --bg-color: #1e1e1e;
             --card-bg: #2d2d2d;
             --text-main: #dfe6e9;
@@ -38,6 +38,31 @@
             --accent-color: #0984e3;
             --nav-bg: rgba(30, 30, 30, 0.95);
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        } */
+
+        /* --- CSS VARIABLES (Default is now Dark) --- */
+        :root {
+            --bg-color: #1e1e1e;
+            --card-bg: #2d2d2d;
+            --text-main: #dfe6e9;
+            --text-light: #b2bec3;
+            --primary-color: #74b9ff;
+            --accent-color: #0984e3;
+            --nav-bg: rgba(30, 30, 30, 0.95);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            --transition: all 0.3s ease;
+        }
+
+        /* Light Mode Overrides */
+        body.light-mode {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --primary-color: #0984e3;
+            --accent-color: #74b9ff;
+            --nav-bg: rgba(255, 255, 255, 0.95);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* --- GLOBAL RESET & TYPOGRAPHY --- */
@@ -261,7 +286,7 @@
         </ul>
         <div class="nav-controls">
             <button id="theme-toggle" aria-label="Toggle Dark Mode">
-                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
             </button>
         </div>
     </nav>
